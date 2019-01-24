@@ -147,7 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player?.initializePlayer()
         
-        Timer.scheduledTimer(timeInterval: TimeInterval(ostacolo.randomBetweenNumbers(firstNum: 1.5, secondNum: 1.5)), target: self, selector: #selector(GameScene.spawnItems), userInfo: nil, repeats: true);
+        Timer.scheduledTimer(timeInterval: TimeInterval(ostacolo.randomBetweenNumbers(firstNum: Int(1.5), secondNum: Int(1.5))), target: self, selector: #selector(GameScene.spawnItems), userInfo: nil, repeats: true);
     }
     
     @objc func handleSwipe(sender: UIGestureRecognizer) {
